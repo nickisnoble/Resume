@@ -23,7 +23,7 @@
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
-$use-grids:         false;
+$use-grids:         true;
 $use-flexbox:       false;
 $use-columns:       false;
 $use-nav:           false;
@@ -59,9 +59,15 @@ $use-greybox:       false;
  * Place any variables that should override inuit.css’ defaults here.
  */
 
+// $BASE Overrides
+$base-font-family:  'ff-meta-serif-web-pro', serif!default;
 
+// $responsive Overrides
+$responsive-extra:  false!default;
 
-
+// $brand Overrides
+$brand-color:       #5c7!default;
+$brand-face:        $base-font-family!default;
 
 /*------------------------------------*\
     $CUSTOM
