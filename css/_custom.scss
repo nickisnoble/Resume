@@ -2,3 +2,27 @@
 	width: 90%;
 	margin: 0 auto;
 }
+header{
+	margin-bottom:2em; 
+	color: #afafaf;
+	.brand-backed{
+		background: $brand-color;
+		color: #fff !important;
+		// position: fixed;
+	}
+}
+section{
+	margin-bottom: 2em; 
+}
+#date-contain{position: relative;}
+#date{
+	text-align: right;
+	position: fixed;
+	right:66%;
+}
+.job__section{
+	text-align: right;
+}
+.job__section-right{
+	font-style: italic;
+}
