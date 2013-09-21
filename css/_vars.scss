@@ -62,10 +62,17 @@ $use-greybox:       false;
 // $BASE Overrides
 $base-font-family:  'ff-meta-serif-web-pro', serif!default;
 
-// $responsive Overrides
+// $Responsive Overrides
 $responsive-extra:  false!default;
+$lap-start:         738px!default;
+$desk-start:        1024px!default;
+$desk-wide-start:   1200px!default;
 
-// $brand Overrides
+// $lap-start:         481px!default;
+// $desk-start:        1024px!default;
+// $desk-wide-start:   1200px!default;
+
+// $Brand Overrides
 $brand-color:       #5c7!default;
 $brand-face:        $base-font-family!default;
 
@@ -75,3 +82,4 @@ $brand-face:        $base-font-family!default;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+ $body-color:       #333;

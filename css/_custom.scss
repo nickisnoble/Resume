@@ -2,27 +2,37 @@
 	width: 90%;
 	margin: 0 auto;
 }
+%brand-backed{
+		background: $brand-color;
+		color: #fff !important;
+	}
 header{
 	margin-bottom:2em; 
 	color: #afafaf;
-	.brand-backed{
-		background: $brand-color;
-		color: #fff !important;
-		// position: fixed;
+	h1{
+		@extend %brand-backed;
 	}
 }
-section{
-	margin-bottom: 2em; 
+article{
+	padding-bottom: 2em; 
 }
 #date-contain{position: relative;}
 #date{
-	text-align: right;
 	position: fixed;
-	right:66%;
 }
-.job__section{
+@include media-query(desk) {
+	#date{
+		right:66%;
+	}
+}
+@include media-query(lap-and-up) {
+	.job__section{
 	text-align: right;
+	}
+	.job__section-right{
+		font-style: italic;
+	}
 }
-.job__section-right{
-	font-style: italic;
+@include media-query(palm) {
+
 }
