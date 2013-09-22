@@ -1,1 +1,1 @@
-$(window).on("scroll resize",function(){var e=$("#date").offset();$("article").each(function(){if(e.top>=$(this).offset().top&&e.top<=$(this).next().offset().top){$("#date").text($(this).attr("data-date"));return}})});$(document).ready(function(){$(window).trigger("scroll")});
+$(window).on("scroll resize",function(){var e=$("#date").offset();$("article").each(function(){if(e.top>=$(this).offset().top&&e.top<=$(this).next().offset().top){$("#date").html($(this).attr("data-date"));return}})});$(document).ready(function(){$(window).trigger("scroll")});

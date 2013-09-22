@@ -49,9 +49,9 @@ header{
 
 // =Layout
 .container, .cc{
-	width: 90%;
-	margin: 0 auto;
-}
+		width: 90%;
+		margin: 0 auto;
+	}
 article{
 	padding-bottom: 2em; 
 }
@@ -67,10 +67,27 @@ article{
 	}
 }
 @include media-query(lap-and-up) {
+	
 	.job__section{
 	text-align: right;
 	}
 	.job__section-right{
 		font-style: italic;
+	}
+}
+@include media-query(palm) {
+	header{
+		margin: 0;
+		h1{
+			position: absolute;
+			left:0;
+			right:0;
+		}
+		h2{
+			padding-top: 2em;
+		}
+	}
+	#date{
+		display: none;
 	}
 }

@@ -13,19 +13,21 @@
 </head>
 <body>
 	<div class="cc">
-		<div class="grid">
+		<div class="grid header">
 			<header>
-				<?php require_once 'php/foursquare.php'; //including the class
-				$fq = new fourSquare("VDJQDH2IL4TGE5TZVVEXCVDVD53ZBFCTKNKNACHSYTL5EPTT"); //fetching the checkins data ?>
+				<?php //require_once 'php/foursquare.php'; //including the class
+				//$fq = new fourSquare("VDJQDH2IL4TGE5TZVVEXCVDVD53ZBFCTKNKNACHSYTL5EPTT"); //fetching the checkins data ?>
 		       <h1 class="brand-backed grid__item lap-and-up-one-third"><br/>Nick Noble<br/></h1><!--
-		    --><h2 class="grid__item lap-one-whole desk-two-thirds"><br/><em>I'm a graphic &amp; web designer, last seen at <a class="foursquare" href=""><?php echo $fq->venueName ?></a>. You can hear me ramble on <a class="svbtle" href="http://nn.svbtle.com">svbtle</a> and follow the useful things I post on <a class="twitter" href="http://twitter.com/nickisnoble">twitter</a>. I'm working on getting my portfolio up, in the meantime here's my resume:</em><br/></h2>
+		    --><h2 class="grid__item lap-one-whole desk-two-thirds"><br/><em>I'm a graphic &amp; web designer<!--
+		    , last seen at <a class="foursquare" href=""><?php echo $fq->venueName ?></a> -->.
+		    You can hear me ramble on <a class="svbtle" href="http://nn.svbtle.com">svbtle</a> and follow the useful things I post on <a class="twitter" href="http://twitter.com/nickisnoble">twitter</a>. I'm working on getting my portfolio up, in the meantime here's my <a class="dribbble" href="http://dribbble.com/nickisnoble">dribbble</a> and my resume:</em><br/></h2>
 			</header>
 		</div>
 		<div class="grid">
 			<div id="date-contain" class="grid__item lap-one-whole desk-one-third">
 				<h3 id="date">You need javascript badly.</h3>
 			</div><!--
-		 --><div class="grid__item lap-one-whole desk-two-thirds">
+		 --><div class="grid__item lap-one-whole desk-two-thirds resume">
 
 				<article class="grid job" data-date="July 2013">
 					<section class="job__section grid__item lap-and-up-one-half">
