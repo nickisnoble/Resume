@@ -55,11 +55,15 @@ header{
 article{
 	padding-bottom: 2em; 
 }
-#date-contain{position: relative;}
+#date-contain{
+	position: relative;
+}
 #date{
 	position: fixed;
 }
-
+footer{
+		background: #eee;
+	}
 // =Responsive
 @include media-query(desk) {
 	#date{
@@ -67,12 +71,20 @@ article{
 	}
 }
 @include media-query(lap-and-up) {
-	
 	.job__section{
 	text-align: right;
 	}
 	.job__section-right{
 		font-style: italic;
+	}
+	footer{
+		z-index: 999;
+		height: 30em;
+	}
+}
+@include media-query(lap) {
+	#date{
+		display: none;
 	}
 }
 @include media-query(palm) {
@@ -88,6 +100,9 @@ article{
 		}
 	}
 	#date{
+		display: none;
+	}
+	.job__section-right{
 		display: none;
 	}
 }
