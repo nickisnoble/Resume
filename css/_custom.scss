@@ -4,7 +4,7 @@
 	color: #fff;
 }
 
-// =Colors
+// =Colors & =Type
 html, body{
 	color: $body-color;
 }
@@ -17,26 +17,39 @@ h1,h2,h3,h4,h5,h6{
 a{
 	color: $brand-color;
 	text-decoration: none;
+	@include vendor(transition,all 300ms ease-out);
 }
 a.twitter{
-	color:#3b91c8;
+	&:hover{color:#3b91c8;}
 }
 a.facebook{
-	color:#49619f;
+	&:hover{color:#49619f;}
 }
 a.dribbble{
-	color:#d1315b;
+	&:hover{color:#d1315b;}
 }
 a.linkedin{
-	color:#4696cb;
+	&:hover{color:#4696cb;}
 }
 a.instagram{
-	color:#6078c0;
+	&:hover{color:#6078c0;}
 }
 a.svbtle{
-	color:#000;
+	&:hover{color:#000;}
 }
-// =Header
+ul{
+	list-style: none;
+	margin-left:0; 
+}
+li{
+	&.nobullet::before{content:""}
+	&::before{
+		content: "▣ ";
+		color:$brand-color;
+	}
+}
+
+// =Sections
 header{
 	margin-bottom:2em; 
 	h1{
@@ -45,8 +58,29 @@ header{
 	h2{
 		color: $muted;
 	}
+	a{
+		color: #616161;
+	}
 }
-
+.section__body{
+	position: relative;
+	background: #fff;
+	z-index: 10;
+	padding-top: 5em;
+}
+// =Bits
+.section__heading{
+	@extend %brand-backed;
+	position: absolute;
+	padding-left: 5%;
+	width: 100%;
+	left:0;
+	z-index: 11;
+}
+.job__context{
+	color: $muted;
+	font-style: italic;
+}
 // =Layout
 .container, .cc{
 		width: 90%;
@@ -71,20 +105,29 @@ footer{
 	}
 }
 @include media-query(lap-and-up) {
+	.job__context{display: none;}
 	.job__section{
 	text-align: right;
 	}
 	.job__section-right{
 		font-style: italic;
 	}
+	.section__heading{width: 35%;}
 	footer{
-		z-index: 999;
+		position: relative;
+		z-index: 11;
 		height: 30em;
 	}
 }
 @include media-query(lap) {
 	#date{
 		display: none;
+	}
+	.section__heading{width: 48%}
+	.split dd{
+		clear:left;
+		text-align: left;
+		margin-bottom: 1em;
 	}
 }
 @include media-query(palm) {
@@ -104,5 +147,10 @@ footer{
 	}
 	.job__section-right{
 		display: none;
+	}
+	.split dd{
+		clear:left;
+		text-align: left;
+		margin-bottom: 1em;
 	}
 }
