@@ -1,17 +1,56 @@
-.container, .cc{
-	width: 90%;
-	margin: 0 auto;
-}
+// =Placeholder
 %brand-backed{
-		background: $brand-color;
-		color: #fff !important;
-	}
+	background: $brand-color;
+	color: #fff;
+}
+
+// =Colors
+html, body{
+	color: $body-color;
+}
+h1,h2,h3,h4,h5,h6{
+	color:$heading-color;
+}
+*::selection{
+	@extend %brand-backed;
+}
+a{
+	color: $brand-color;
+	text-decoration: none;
+}
+a.twitter{
+	color:#3b91c8;
+}
+a.facebook{
+	color:#49619f;
+}
+a.dribbble{
+	color:#d1315b;
+}
+a.linkedin{
+	color:#4696cb;
+}
+a.instagram{
+	color:#6078c0;
+}
+a.svbtle{
+	color:#000;
+}
+// =Header
 header{
 	margin-bottom:2em; 
-	color: #afafaf;
 	h1{
 		@extend %brand-backed;
 	}
+	h2{
+		color: $muted;
+	}
+}
+
+// =Layout
+.container, .cc{
+	width: 90%;
+	margin: 0 auto;
 }
 article{
 	padding-bottom: 2em; 
@@ -20,6 +59,8 @@ article{
 #date{
 	position: fixed;
 }
+
+// =Responsive
 @include media-query(desk) {
 	#date{
 		right:66%;

@@ -15,8 +15,10 @@
 	<div class="cc">
 		<div class="grid">
 			<header>
+				<?php require_once 'php/foursquare.php'; //including the class
+				$fq = new fourSquare("VDJQDH2IL4TGE5TZVVEXCVDVD53ZBFCTKNKNACHSYTL5EPTT"); //fetching the checkins data ?>
 		       <h1 class="brand-backed grid__item lap-and-up-one-third"><br/>Nick Noble<br/></h1><!--
-		    --><h2 class="grid__item lap-one-whole desk-two-thirds"><br/><em>I'm a graphic &amp; web designer, last seen at [latest foursquare checkin]. You can hear me ramble on [svbtle] and follow the useful things I post on [twitter]. In the meantime, here's my resume.</em><br/></h2>
+		    --><h2 class="grid__item lap-one-whole desk-two-thirds"><br/><em>I'm a graphic &amp; web designer, last seen at <a class="foursquare" href=""><?php echo $fq->venueName ?></a>. You can hear me ramble on <a class="svbtle" href="http://nn.svbtle.com">svbtle</a> and follow the useful things I post on <a class="twitter" href="http://twitter.com/nickisnoble">twitter</a>. I'm working on getting my portfolio up, in the meantime here's my resume:</em><br/></h2>
 			</header>
 		</div>
 		<div class="grid">
@@ -28,7 +30,7 @@
 				<article class="grid job" data-date="July 2013">
 					<section class="job__section grid__item lap-and-up-one-half">
 						<h3>Contract Graphic Art</h3>
-						<p>Produced various assets for concepting the third season, including photo manipulation, scene visualization, and “mood” boards.</p>
+						<p>Produced various assets for concepting the third season, including photo manipulation, scene visualization, and “mood” boards from research.</p>
 					</section><!--
 				 --><section class="job__section-right grid__item lap-and-up-one-half">
 						<h3>“American Horror Story”</h3>
@@ -58,7 +60,7 @@
 					</section>
 				</article>
 
-				<article class="grid job" data-date="March - April 2013">
+				<article class="grid job" data-date="December 2012 - April 2013">
 					<section class="job__section grid__item lap-and-up-one-half">
 						<h3>Freelance Graphic Design</h3>
 						<p>Produced promotional print graphics (posters, postcards, signage, etc.) for various exhibits.</p>
@@ -69,17 +71,50 @@
 					</section>
 				</article>
 
-				<article class="grid job" data-date="March - April 2013">
+				<article class="grid job" data-date="December 2012 - January 2013">
 					<section class="job__section grid__item lap-and-up-one-half">
-						<h3>Freelance Graphic Design</h3>
-						<p>Produced promotional print graphics (posters, postcards, signage, etc.) for various exhibits.</p>
+						<h3>Freelance Web Developer</h3>
+						<p>Built a custom wordpress theme for Dat Dog NOLA.</p>
 					</section><!--
 				 --><section class="job__section-right grid__item lap-and-up-one-half">
-						<h3>The Ogden Museum of Southern Art</h3>
-						<p>A New Orleans based non-profit and art museum dedicated</p>
+						<h3>Dat Dog</h3>
+						<p>A New Orleans based hot dog joint, aiming to make the world a better place with sausage.</p>
 					</section>
 				</article>
 
+				<article class="grid job" data-date="April - November 2012">
+					<section class="job__section grid__item lap-and-up-one-half">
+						<h3>Graphic Art</h3>
+						<p>Created various graphics for props and set dressing throughout seasons 3 &amp; 4. I also got to act a bit!</p>
+					</section><!--
+				 --><section class="job__section-right grid__item lap-and-up-one-half">
+						<h3>“Treme”</h3>
+						<p>An HBO original TV series about New Orleans life post Katrina.</p>
+					</section>
+				</article>
+
+				<article class="grid job" data-date="January 2012">
+					<section class="job__section grid__item lap-and-up-one-half">
+						<h3>Intern</h3>
+						<p>Learned more about the ins and outs of a film's Art Dept.</p>
+					</section><!--
+				 --><section class="job__section-right grid__item lap-and-up-one-half">
+						<h3>“Treme”</h3>
+						<p>An HBO original TV series about New Orleans life post Katrina.</p>
+					</section>
+				</article>
+
+				<article class="grid job" data-date="March - April 2013">
+					<section class="job__section grid__item lap-and-up-one-half">
+						<h3>Intern</h3>
+						<p>Worked on various identity, photo, event, and print projects for brands including Bombay Sapphire, HBO, Bacardi, and Yankee Stadium.</p>
+					</section><!--
+				 --><section class="job__section-right grid__item lap-and-up-one-half">
+						<h3>Cathedral Creative</h3>
+						<p>Cathedral is a creative marketing and photography studio dedicated to dynamic print, outdoor, and interactive media.</p>
+					</section>
+				</article>
+				
 			</div>
 		</div>
 	</div>
