@@ -81,30 +81,15 @@ footer {
 			margin: 1em 0;
 		}	
 	}
-	&.twitter { 
-		background: #2094ca; 
-		box-shadow: inset 0 -11px 15px adjust-color(#2094ca, $lightness:-10%), inset 0 11px 15px adjust-color(#2094ca, $lightness:10%);
-	}
+	&.twitter { background: #2094ca; }
 	&.tumblr { background: #6985bc; }
 	&.forrst { background: #2f9028; }
-	&.dribbble { 
-		background:#dedede;
-		a{
-			color: #656565 !important;
-			&:hover{
-				color: #d5335d !important;
-			}
-		}
-	}
+	&.dribbble { background:#d5335d;}
 	&.github { background: #4a535b; }
 	&.skype { background: #47aed9; }
 	&.google-plus { background: #c73525; }
-	&.reddit { background: orangeRed; }
-	&.youtube { background: #c4302b; }
 	&.linkedin { background: #2c80b6; }
 	&.facebook { background: #3B5998; }
-	&.flickr { background: #ff0084; }
-	&.pinterest { background: #ce2020; }
 	&.instagram { 
 		background: #587bc2;
 		text-shadow: 0 1px 1px #3a5386; 
@@ -147,7 +132,7 @@ footer {
 	width: 90%;
 	margin: 0 auto;
 }
-.resume{
+#resume{
 	padding-left: 0;
 }
 article{
