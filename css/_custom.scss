@@ -17,14 +17,15 @@ h1,h2,h3,h4,h5,h6{
 a{
 	color: $brand-color;
 	text-decoration: none;
-	@include vendor(transition,all 300ms ease-out);
-	&:hover{
-		color: darken($brand-color, 9%);
-	}
+	@include vendor(transition,all 300ms);
+	&:hover{color:adjust-color($brand-color, $alpha: -.4);}
 }
 ul{
 	list-style: none;
 	margin-left:0;
+}
+.blacken{
+	color: #000;
 }
 // =Sections
 header{
@@ -36,15 +37,23 @@ header{
 		color: $muted;
 	}
 	a{
-		color: #555;
 		&.twitter{
-			&:hover{color:#3b91c8;}
+			color:#3b91c8;
+			&:hover{
+				color:adjust-color(#3b91c8, $alpha: -.4);
+			}
 		}
 		&.dribbble{
-			&:hover{color:#d1315b;}
+			color:#d1315b;
+			&:hover{
+				color:adjust-color(#d1315b, $alpha: -.4);
+			}
 		}
 		&.svbtle{
-			&:hover{color:#000;}
+			color:#000;
+			&:hover{
+				color:adjust-color(#000, $alpha: -.4);
+			}
 		}
 	}
 }
@@ -160,11 +169,7 @@ article{
 footer {
 	background: #60ba59;
 	color: #fff;
-	
-	@include vendor(transition, background 300ms);
-
-	a {color: #fff;}
-
+	@include vendor(transition, background 500ms);
 	.social {
 		list-style: none;
 		margin:0; 
@@ -174,17 +179,10 @@ footer {
 		}
 		& li a {
 			color: #fff;
-			text-decoration: none;
-			font-weight: 700;
+			// font-weight: 700;
 			display: inline-block;
 			padding-right: 30px;
 			margin: 1em 0;
-			opacity: .8;
-		   
-			@include vendor(transition, opacity 300ms);
-			&:hover {
-				opacity: .99;
-			}
 		}	
 	}
 	&.twitter { background: #2094ca; }
@@ -201,8 +199,13 @@ footer {
 	&.flickr { background: #ff0084; }
 	&.pinterest { background: #ce2020; }
 	&.instagram { background: #587bc2; }
-	&.svbtle { background: #000; }
-}
-		
-	
+	&.svbtle { 
+		background: #fff;
+		border-top: 1px solid black;
+		a{
+			color: black !important; 
+			position: relative;
 
+		}
+	}
+}
