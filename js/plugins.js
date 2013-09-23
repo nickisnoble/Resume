@@ -11,3 +11,13 @@ $(window).on("scroll resize", function(){
 $(document).ready(function(){
 	$(window).trigger('scroll'); // init the value for scroll
 });
+
+(function(){
+	$("a.social-link").mouseenter(function(){
+		var socialClass = $(this).attr("class").replace('social-link','');
+		$('footer').addClass(socialClass);
+	});
+	$("a.social-link").mouseleave(function(){
+		$('footer').removeClass();
+	});
+})($);
